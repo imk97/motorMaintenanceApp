@@ -23,10 +23,10 @@ class MyApp extends StatelessWidget {
           // or simply save your changes to "hot reload" in a Flutter IDE).
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
-          primaryColor: Colors.grey,
+          primaryColor: Colors.white,
           // primarySwatch: Colors.blue,
           appBarTheme: const AppBarTheme(
-              color: Colors.grey,
+              color: Colors.white,
               foregroundColor: Colors.black,
               systemOverlayStyle: SystemUiOverlayStyle(
                 statusBarColor: Colors.white,
@@ -73,11 +73,20 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0.0,
+        title: const Text(
+          'itmam97@gmail.com',
+          style: TextStyle(fontSize: 15.0),
+        ),
+        actions: <Widget>[
+          IconButton(onPressed: () {}, icon: const Icon(Icons.add))
+        ],
+      ),
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.all(20.0),
         child: Column(
-          children: const [
+          children: const <Widget>[
             Card(
               child: ListTile(
                 title: Text('Tukar Minyak Hitam'),
@@ -96,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-      )),
+      ),
     );
   }
 }
