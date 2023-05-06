@@ -87,17 +87,40 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
-          children: const <Widget>[
-            Text(
+          children: <Widget>[
+            const Text(
               '1 Service Yet',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0),
             ),
-            Text(
+            const Text(
               'See Maintenance Detail >',
               textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            Card(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const <Widget>[
+                Expanded(
+                  child: Text(
+                    'All',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Expanded(
+                  child: Text(
+                    'Uncompleted',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Expanded(
+                  child: Text(
+                    'Completed',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+            const Card(
               child: ListTile(
                 title: Text('Tukar Minyak Hitam'),
                 subtitle: Text('5 May 2023'),
@@ -106,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Card(
+            const Card(
               child: ListTile(
                 title: Text('Tukar Minyak Hitam'),
                 subtitle: Text('3 February 2023'),
