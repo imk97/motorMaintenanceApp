@@ -84,9 +84,19 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(onPressed: () {}, icon: const Icon(Icons.add))
         ],
       ),
-      body: SafeArea(
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: const <Widget>[
+            Text(
+              '1 Service Yet',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0),
+            ),
+            Text(
+              'See Maintenance Detail >',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             Card(
               child: ListTile(
                 title: Text('Tukar Minyak Hitam'),
