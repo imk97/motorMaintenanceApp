@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           // or simply save your changes to "hot reload" in a Flutter IDE).
           // Notice that the counter didn't reset back to zero; the application
           // is not restarted.
-          primaryColor: Colors.white,
+          primaryColor: Colors.grey[100],
           // primarySwatch: Colors.blue,
           appBarTheme: const AppBarTheme(
               color: Colors.white,
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         elevation: 0.0,
         title: const Text(
@@ -88,36 +88,51 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[
-            const Text(
-              '1 Service Yet',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0),
-            ),
-            const Text(
-              'See Maintenance Detail >',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold),
+            Container(
+              margin: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+              child: Column(
+                children: const <Widget> [
+                  Text('1 Service Yet', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0)),
+                  Text('See Mainenance Detail >', style: TextStyle(fontWeight: FontWeight.bold))
+                ],
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Expanded(
-                  child: Text(
-                    'All',
-                    textAlign: TextAlign.center,
+              children: <Widget>[
+                Card(
+                  clipBehavior: Clip.hardEdge,
+                  child: InkWell(
+                    splashColor: Colors.blue.withAlpha(30),
+                    onTap: () {},
+                    child: const SizedBox(
+                      width: 107.0,
+                      height: 30.0,
+                      child: Center(child: Text('All')),
+                    ),
                   ),
                 ),
-                Expanded(
-                  child: Text(
-                    'Uncompleted',
-                    textAlign: TextAlign.center,
+                Card(
+                  clipBehavior: Clip.hardEdge,
+                  child: InkWell(
+                    onTap: () {},
+                    child: const SizedBox(
+                      width: 107.0,
+                      height: 30.0,
+                      child: Center(child: Text('Uncompleted')),
+                    ),
                   ),
                 ),
-                Expanded(
-                  child: Text(
-                    'Completed',
-                    textAlign: TextAlign.center,
+                Card(
+                  child: InkWell(
+                    onTap: () {},
+                    child: const SizedBox(
+                      width: 107.0,
+                      height: 30.0,
+                      child: Center(child: Text('Completed')),
+                    ),
                   ),
-                ),
+                )
               ],
             ),
             const Card(
