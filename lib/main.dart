@@ -124,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Card(
+                  clipBehavior: Clip.hardEdge,
                   child: InkWell(
                     onTap: () {},
                     child: const SizedBox(
