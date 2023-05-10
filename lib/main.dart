@@ -86,73 +86,128 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
-              child: Column(
-                children: const <Widget> [
-                  Text('1 Service Yet', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0)),
-                  Text('See Mainenance Detail >', style: TextStyle(fontWeight: FontWeight.bold))
+        child: ListView(children: [
+          Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+                child: Column(
+                  children: const <Widget>[
+                    Text('1 Service Yet',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 35.0)),
+                    Text('See Mainenance Detail >',
+                        style: TextStyle(fontWeight: FontWeight.bold))
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Card(
+                    clipBehavior: Clip.hardEdge,
+                    child: InkWell(
+                      splashColor: Colors.blue.withAlpha(30),
+                      onTap: () {},
+                      child: const SizedBox(
+                        width: 107.0,
+                        height: 30.0,
+                        child: Center(child: Text('All')),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    clipBehavior: Clip.hardEdge,
+                    child: InkWell(
+                      onTap: () {},
+                      child: const SizedBox(
+                        width: 107.0,
+                        height: 30.0,
+                        child: Center(child: Text('Uncompleted')),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    child: InkWell(
+                      onTap: () {},
+                      child: const SizedBox(
+                        width: 107.0,
+                        height: 30.0,
+                        child: Center(child: Text('Completed')),
+                      ),
+                    ),
+                  )
                 ],
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Card(
-                  clipBehavior: Clip.hardEdge,
-                  child: InkWell(
-                    splashColor: Colors.blue.withAlpha(30),
-                    onTap: () {},
-                    child: const SizedBox(
-                      width: 107.0,
-                      height: 30.0,
-                      child: Center(child: Text('All')),
-                    ),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('5 May 2023'),
+                  trailing: Icon(
+                    Icons.check_circle,
                   ),
-                ),
-                Card(
-                  clipBehavior: Clip.hardEdge,
-                  child: InkWell(
-                    onTap: () {},
-                    child: const SizedBox(
-                      width: 107.0,
-                      height: 30.0,
-                      child: Center(child: Text('Uncompleted')),
-                    ),
-                  ),
-                ),
-                Card(
-                  child: InkWell(
-                    onTap: () {},
-                    child: const SizedBox(
-                      width: 107.0,
-                      height: 30.0,
-                      child: Center(child: Text('Completed')),
-                    ),
-                  ),
-                )
-              ],
-            ),
-            const Card(
-              child: ListTile(
-                title: Text('Tukar Minyak Hitam'),
-                subtitle: Text('5 May 2023'),
-                trailing: Icon(
-                  Icons.check_circle,
                 ),
               ),
-            ),
-            const Card(
-              child: ListTile(
-                title: Text('Tukar Minyak Hitam'),
-                subtitle: Text('3 February 2023'),
-                trailing: Icon(Icons.check_circle),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
               ),
-            )
-          ],
-        ),
+                            const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
+              ),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
+              ),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
+              ),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
+              ),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
+              ),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
+              ),
+              const Card(
+                child: ListTile(
+                  title: Text('Tukar Minyak Hitam'),
+                  subtitle: Text('3 February 2023'),
+                  trailing: Icon(Icons.check_circle),
+                ),
+              )
+
+            ],
+          ),
+        ]),
       ),
     );
   }
