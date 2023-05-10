@@ -155,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   trailing: Icon(Icons.check_circle),
                 ),
               ),
-                            const Card(
+              const Card(
                 child: ListTile(
                   title: Text('Tukar Minyak Hitam'),
                   subtitle: Text('3 February 2023'),
@@ -204,7 +204,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   trailing: Icon(Icons.check_circle),
                 ),
               )
-
             ],
           ),
         ]),
