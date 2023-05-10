@@ -26,10 +26,10 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.grey[100],
           // primarySwatch: Colors.blue,
           appBarTheme: const AppBarTheme(
-              color: Colors.white,
+              color: Color(0xFFF5F5F5),
               foregroundColor: Colors.black,
               systemOverlayStyle: SystemUiOverlayStyle(
-                statusBarColor: Colors.white,
+                statusBarColor: Color(0xFFF5F5F5),
                 statusBarBrightness: Brightness.light,
                 statusBarIconBrightness: Brightness.dark,
               ))),
