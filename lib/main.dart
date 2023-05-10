@@ -75,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
+        backgroundColor: Colors.grey[100],
         elevation: 0.0,
         title: const Text(
           'itmam97@gmail.com',
