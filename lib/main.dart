@@ -96,30 +96,66 @@ class _MyHomePageState extends State<MyHomePage> {
                   builder: (BuildContext context) {
                     return SizedBox(
                       child: Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: const EdgeInsets.fromLTRB(20, 40, 20, 40),
                         child: Column(
                           // mainAxisAlignment: MainAxisAlignment.center,
                           mainAxisSize: MainAxisSize.min,
-                          children: const <Widget>[
-                            Align(
+                          children: <Widget>[
+                            const Align(
                               alignment: Alignment.topLeft,
                               child: Text(
                                 'Title',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ),
-                            Align(
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 15.0),
+                              child: Form(
+                                child: Column(
+                                  children: [TextFormField()],
+                                ),
+                              ),
+                            ),
+                            const Align(
                               alignment: Alignment.topLeft,
                               child: Text(
                                 'Threshold',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ),
-                            Align(
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 15.0),
+                              child: Form(
+                                child: Column(
+                                  children: [TextFormField()],
+                                ),
+                              ),
+                            ),
+                            const Align(
                               alignment: Alignment.topLeft,
                               child: Text(
                                 'Date',
                                 style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Form(
+                              child: Column(
+                                children: [TextFormField()],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 15.0),
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    print('Done');
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                      fixedSize: const Size(335, 46),
+                                      backgroundColor: Colors.black),
+                                  child: const Text('Done'),
+                                ),
                               ),
                             ),
                           ],
